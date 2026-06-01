@@ -12,7 +12,7 @@ export function initHome() {
                     start: "top top",
                     end: "bottom 30%",
                     scrub: 1,
-                    markers:true
+                    // markers:true
                 },
             });
 
