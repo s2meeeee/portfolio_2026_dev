@@ -20,20 +20,17 @@
       position: relative;
       width: 100%;
       height: 55%;
-      text-align: center;
+      text-align: left;
 
       p {
-        position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
 
         font-family: $font-main;
-        font-size: 8vw;
-        font-weight: bolder;
+        font-size: 4rem;
 
-        opacity: 0;
-        animation: slideUpFade 9s ease-in-out infinite;
+        
 
         @media (min-width: 751px) and (max-width: 1199px) {
           bottom: 20%;
@@ -138,35 +135,66 @@
   /* =========================
    ABOUT
 ========================= */
-  .about {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 80px 80px 0 0;
-    color: $dark-color;
-    padding: 150px 0px;
+  .project {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 0;
+    background-color: saddlebrown;
+    
+   
 
     @media (max-width:750px) {
-      padding-bottom: 50px;
     }
-
-    .about__content {
-      width: min(92%, 1400px);
-      height: auto;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: clamp(100px, 6vw, 150px);
+    &__desc{
+      padding-bottom: 1rem;
+      text-align:center;
+      font-size:$text-sm;
+      display: block;
+      
+      
+    }
+    .project__publishing {
+      width: max( 1400px);
+      height: 90vh;
 
       @media (max-width: 1200px) {
-        width: min(90%, 920px);
-        gap: clamp(24px, 5vw, 48px);
+       
       }
 
       @media (max-width: 750px) {
-        width: calc(100% - 32px);
-        gap: 24px;
+       
       }
+
+      .publishing__list{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+      }
+      .publishing__card{
+        flex: 1 1 auto;
+        background-color: #1A1A1A;
+        border-right: .5px solid #767676;
+        
+      }
+    }
+    .publishing__card{
+      display: grid;
+        grid-template-rows: 1.4fr 0.8fr 0.8fr;
+        &--img{
+          background-color: cadetblue;
+        }
+        &--title{
+          background-color: rebeccapurple;
+        }
+        &--desc{
+          background-color: sandybrown;
+        }
+
     }
   }
 
