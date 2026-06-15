@@ -2,18 +2,17 @@
 
 
 body {
-  color: $text-light;
   font-family: $font-kr;
+  letter-spacing: 1.5px;
 }
 
 .wrap {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  background-color: $dark-color;
 }
-.container-90 {
-  width: 90%;
+.container {
+  width: min(1200px);
   margin: 0 auto;
 }
 
@@ -25,4 +24,7 @@ section {
 
 .point {
   color: $point-color;
+}
+.point-p{
+  color: $purple;
 }
