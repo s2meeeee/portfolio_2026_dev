@@ -1,7 +1,7 @@
 @use "../base/variables" as *;
 
 .header {
-  color: $dark-color;
+  position: absolute;
   font-size: 1px;
   width: 100%;
   box-sizing: border-box;
@@ -35,8 +35,6 @@
   li {
     font-size: .825rem;
     padding:0.5rem 1rem;
-    border-radius: 50px;
-    border: 1px solid rgba(255 ,255, 255, 0.5)
 
 
   }
@@ -79,43 +77,43 @@
   }
 }
 
-.nav--full {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background:#fff;
-  z-index: 1000;
+// .nav--full {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background:#fff;
+//   z-index: 1000;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+//   transition: opacity 0.4s ease, visibility 0.4s ease;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  ul {
-    text-align: center;
-  }
+//   ul {
+//     text-align: center;
+//   }
 
-  li {
-    margin: 20px 0;
-  }
+//   li {
+//     margin: 20px 0;
+//   }
 
-  a {
-    font-size: 40px;
-  }
+//   a {
+//     font-size: 40px;
+//   }
 
-  &.is-open {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-}
+//   &.is-open {
+//     display: flex;
+//     opacity: 1;
+//     visibility: visible;
+//     pointer-events: auto;
+//   }
+// }
 
 body.menu-open {
   .nav--full {

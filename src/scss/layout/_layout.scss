@@ -4,6 +4,8 @@
 body {
   font-family: $font-kr;
   letter-spacing: 1.5px;
+  background-color: $dark-color;
+  color: $text-light;
 }
 
 .wrap {
@@ -24,7 +26,4 @@ section {
 
 .point {
   color: $point-color;
-}
-.point-p{
-  color: $purple;
 }
