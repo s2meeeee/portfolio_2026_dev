@@ -18,109 +18,152 @@
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
       width: 100%;
+
     }
 
-    .main__title {
-      width: 80%;
+    &__content {
       display: flex;
       flex-direction: column;
-
-      &-tag {
-        font-size: $text-sm;
-        color: $green;
-        font-weight: 300;
-        display: flex;
-        align-items: center;
-
-        &::before {
-          content: '';
-          display: block;
-          width: 28px;
-          height: 1.5px;
-          background-color: $green;
-        }
-      }
-
-      &-name{
-        padding-top: 2rem;
-        font-size: 4rem;
-        font-weight: 600;
-        line-height: 4.5rem;
-      }
-      &-desc{
-        padding-top: 2rem;
-        line-height: 1.8rem;
-        
-      }
-
-      .main__title-cta{
-        padding-top: 4rem;
-        display: flex;
-
-        
-        
-        .main__cta{
-          padding: 20px 40px;
-          border-radius:10px;
-          margin-right: 20px;
-          font-weight: 500;
-          background-color: $purple;
-          
-        }
-      }
-
-      .main__cta:nth-child(2){
-        background-color: $green;
-      }
-      
+      position: relative;
     }
 
-    .main__visual{
+    &__eyebrow {
+      font-size: $text-sm;
+      color: $green;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: block;
+        margin-right: 5px;
+        width: 28px;
+        height: 1.5px;
+        background-color: $green;
+      }
+    }
+
+    .main__intro-text {
+      font-size: 3.5rem;
+
+    }
+
+    &__intro {
+      padding-top: 2rem;
+      font-weight: 600;
+      line-height: 4.5rem;
+
+      &-roles {
+        width: 100%;
+        height: 4.5rem;
+        overflow: hidden;
+        font-size: 4rem;
+      }
+
+      &-roles-track {
+        animation: role-change 5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+      }
+    }
+
+    .intro-role {
+      display: block;
+      height: 4.5rem;
+      line-height: 4.5rem;
+      color: $purple;
+    }
+
+    @keyframes role-change {
+
+      0%,
+      18% {
+        transform: translateY(0);
+      }
+
+      28%,
+      46% {
+        transform: translateY(-4.5rem);
+      }
+
+      56%,
+      74% {
+        transform: translateY(-9rem);
+      }
+
+      84%,
+      100% {
+        transform: translateY(-13.5rem);
+      }
+    }
+
+    &__description {
+      padding-top: 2rem;
+      line-height: 1.8rem;
+    }
+
+    &__actions {
+      padding-top: 4rem;
+      display: flex;
+    }
+
+    &__button {
+      padding: 20px 40px;
+      border-radius: 10px;
+      margin-right: 20px;
+      font-weight: 500;
+      background-color: $purple;
+
+      &--secondary {
+        background-color: $green;
+      }
+    }
+
+    &__cards {
       display: flex;
       justify-content: center;
       align-items: end;
       flex-direction: column;
       gap: 2rem;
+    }
 
+    &__card {
+      width: 80%;
+      padding: 1.5rem;
+      border: 1.5px solid $border;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      background-color: $bg-soft;
+      color: $text-secondary;
+      gap: 20px;
+    }
 
-      .main__card{
-        width: 80%;
-        padding: 1.5rem;
-        border: 1.5px solid $border;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        background-color: $bg-soft;
-        color:$text-secondary;
-        gap: 20px;
+    &__card-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
 
-
-        .main__card-icon{
-          width: 45px;
-          height: 45px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 10px;
-          
-        }
-        .main__card-text{
-          font-weight: 300;
-          font-size: $text-sm;
-          >strong{
-            display: block;
-            padding-bottom: 10px;
-            font-weight: 600;
-          }
-        }
-        .icon-purple{
-          background-color: $purple-light;
-        }
-        .icon-green{
-          background-color: $green-light;
-        }
+      &--purple {
+        background-color: $purple-light;
       }
-      
+
+      &--green {
+        background-color: $green-light;
+      }
+    }
+
+    &__card-text {
+      font-weight: 300;
+      font-size: $text-sm;
+
+      >strong {
+        display: block;
+        padding-bottom: 10px;
+        font-weight: 600;
+      }
     }
   }
 
